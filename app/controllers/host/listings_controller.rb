@@ -6,7 +6,7 @@ class Host::ListingsController < ApplicationController
   def create
   	@listing = current_user.listings.new(listing_create_params)
   	if @listing.save
-  		redirect_to @listing
+  		redirect_to host_listing_path(@listing)
   	else
   		flash.now[:errors] = @listing.errors.full_messages
   		render :new
@@ -20,7 +20,7 @@ class Host::ListingsController < ApplicationController
   def update
   	@listing = current_user.listings.find(params[:id])
   	if @listing.update(listing_update_params)
-  		redirect_to @listing
+  		redirect_to host_listing_path(@listing)
   	else
   		flash.now[:errors] = @listing.errors.full_messages
   		render :edit

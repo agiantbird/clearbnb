@@ -1,2 +1,4 @@
-<h1>Host::Listings#show</h1>
-<p>Find me in app/views/host/listings/show.html.erb</p>
+<h1><%= @listing.title %></h1>
+
+
+<pre><%= JSON.pretty_generate(@listing.as_json) %></pre>
