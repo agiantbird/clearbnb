@@ -1,10 +1,6 @@
 <h1>Edit <%= @listing.title %></h1>
 
-<% if flash[:errors] %>
-	<% flash[:errors].each do |error| %>
-		<%= error %>
-	<% end %>
-<% end %>
+<%= render partial: "shared/errors" %>
 
 <form action="<%= host_listing_path(@listing) %>" method="post">
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
