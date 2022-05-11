@@ -6,6 +6,7 @@
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="text-sm mt-6 text-center">
+        <%= render "shared/notices" %>
         <a href="/users/auth/google" data-method="post" class="mt-6 text-center font-medium text-indigo-600 hover:text-indigo-500"> Sign in with Google   </a>
       </div>
     </div>
